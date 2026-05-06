@@ -1,9 +1,4 @@
-﻿  glad.c
-  BreakOutMain.cpp
+﻿  BreakOutMain.cpp
 C:\Works\BreakOut\GLBreakOut\GLBreakOut\BreakOutMain.cpp(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  Game.cpp
-  ResourceManager.cpp
-  Shader.cpp
-  Texture2D.cpp
-  コードを生成中...
+C:\Works\BreakOut\GLBreakOut\GLBreakOut\BreakOutMain.cpp(46,22): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
   GLBreakOut.vcxproj -> C:\Works\BreakOut\GLBreakOut\x64\Debug\GLBreakOut.exe
