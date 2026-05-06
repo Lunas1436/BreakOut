@@ -1,4 +1,5 @@
 
+#include <windows.h>
 #include "BreakOutMain.h"
 #include <iostream>
 
@@ -7,7 +8,10 @@ const int SCREEN_HEIGHT = 600;
 
 Game BreakOut(SCREEN_WIDTH, SCREEN_HEIGHT);
 
-int main()
+int WINAPI WinMain(HINSTANCE hInstance,
+	HINSTANCE hPrevInstance,
+	LPSTR lpCmdLine,
+	int nCmdShow)
 {
 	// GLFW初期化→OpenGLのすべての機能を使う前に呼び出す必要がある
 	glfwInit();
