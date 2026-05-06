@@ -1,7 +1,60 @@
 
+#include "BreakOutMain.h"
+#include <iostream>
+
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HEIGHT = 600;
+
+Game BreakOut(SCREEN_WIDTH, SCREEN_HEIGHT);
 
 int main()
 {
+	// GLFW初期化→OpenGLのすべての機能を使う前に呼び出す必要がある
+	glfwInit();
+
+	// ウィンドウの設定
+	// OpenGL 3.3を使用
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+	// 動作モードをCore Profileに設定→シェーダーパイプラインを中心としたモダンなOpenGLを使える
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	// ウィンドウサイズ変更不可に設定
+	glfwWindowHint(GLFW_RESIZABLE, false);
+	// ウィンドウ作成
+	GLFWwindow* window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "BreakOut", nullptr, nullptr);
+	glfwMakeContextCurrent(window);
+
+	// GLAD初期化
+	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+		std::cout << "Failed to initialize GLAD" << std::endl;
+		return -1;
+	}
+
+	glfwSetKeyCallback(window, key_callback);
+	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
+	glViewport(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+	BreakOut.Init();
+
+	float deltaTime = 0.0f;
+	float lastFrame = 0.0f;
+
+	while (!glfwWindowShouldClose(window)) {
+
+	}
+
+
 
 	return 0;
+}
+
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+}
+
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)
+{
 }

@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="GLBreakOut/GLBreakOut.vcxproj" />
+  <Project Path="GLBreakOut/GLBreakOut.vcxproj" Id="df4b7b40-c5ef-48ae-9743-b04cb178590b" />
 </Solution>
