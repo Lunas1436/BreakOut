@@ -39,6 +39,9 @@
     <ClCompile Include="SpriteRenderer.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -59,12 +62,15 @@
     <ClInclude Include="SpriteRenderer.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Shaders\fragmentShader.fs">
+    <None Include="..\Shaders\fragmentSpriteShader.fs">
       <Filter>Shaders</Filter>
     </None>
-    <None Include="..\Shaders\vertexShader.vs">
+    <None Include="..\Shaders\vertexSpriteShader.vs">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>
