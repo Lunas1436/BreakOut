@@ -24,10 +24,11 @@ void Game::Init()
 
 	Renderer = new SpriteRenderer(spriteShader);
 
-	ResourceManager::LoadTexture("../resource/textures/background.jpg", false, "background");
-	ResourceManager::LoadTexture("../resource/textures/background.jpg", false, "face");
-	ResourceManager::LoadTexture("../resource/textures/background.jpg", false, "block");
-	ResourceManager::LoadTexture("../resource/textures/background.jpg", false, "block_solid");
+    ResourceManager::LoadTexture("../resources/textures/background.jpg", false, "background");
+    ResourceManager::LoadTexture("../resources/textures/awesomeface.png", true, "face");
+    ResourceManager::LoadTexture("../resources/textures/block.png", false, "block");
+    ResourceManager::LoadTexture("../resources/textures/block_solid.png", false, "block_solid");
+    ResourceManager::LoadTexture("../resources/textures/paddle.png", true, "paddle");
 
 	GameLevel one;
 	one.Load("../resources/levels/one.lvl", this->Width, this->Height / 2);
