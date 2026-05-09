@@ -136,6 +136,7 @@
     <ClCompile Include="..\..\..\..\OpenGL\include\glad\glad.c" />
     <ClCompile Include="BreakOutMain.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameLevel.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Shader.cpp" />
@@ -145,6 +146,7 @@
   <ItemGroup>
     <ClInclude Include="BreakOutMain.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameLevel.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Shader.h" />

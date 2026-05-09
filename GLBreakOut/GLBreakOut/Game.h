@@ -8,6 +8,7 @@
 
 #include "ResourceManager.h"
 #include "SpriteRenderer.h"
+#include "GameLevel.h"
 
 enum GameState {
 	GAME_ACTIVE,
@@ -27,6 +28,8 @@ public:
 	void Render();
 	
 public:
+	std::vector<GameLevel> Levels;
+	unsigned int Level;
 	GameState State;
 	bool Keys[1024];
 	unsigned int Width, Height;

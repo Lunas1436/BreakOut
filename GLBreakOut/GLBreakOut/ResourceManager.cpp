@@ -50,20 +50,15 @@ Shader ResourceManager::loadShaderFromFile(const char* vShaderFile, const char* 
     std::string geometryCode;
     try
     {
-        // open files
         std::ifstream vertexShaderFile(vShaderFile);
         std::ifstream fragmentShaderFile(fShaderFile);
         std::stringstream vShaderStream, fShaderStream;
-        // read file's buffer contents into streams
         vShaderStream << vertexShaderFile.rdbuf();
         fShaderStream << fragmentShaderFile.rdbuf();
-        // close file handlers
         vertexShaderFile.close();
         fragmentShaderFile.close();
-        // convert stream into string
         vertexCode = vShaderStream.str();
         fragmentCode = fShaderStream.str();
-        // if geometry shader path is present, also load a geometry shader
         if (gShaderFile != nullptr)
         {
             std::ifstream geometryShaderFile(gShaderFile);
@@ -90,8 +85,7 @@ Texture2D ResourceManager::loadTextureFromFile(const char* file, bool alpha)
 {
     // create texture object
     Texture2D texture;
-    if (alpha)
-    {
+    if (alpha) { // ボールなどの画像の背景を消したいやつはこっち
         texture.Internal_Format = GL_RGBA;
         texture.Image_Format = GL_RGBA;
     }
