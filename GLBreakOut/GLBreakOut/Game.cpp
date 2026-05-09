@@ -1,6 +1,9 @@
 #include "Game.h"
 
 SpriteRenderer* Renderer;
+GameObject* Player;
+const glm::vec2 PLAYER_SIZE(100.0f, 20.0f);
+const float PLAYER_VELOCITY(500.0f);
 
 Game::Game(unsigned int width, unsigned int height)
 	:Width(width), Height(height), State(GAME_ACTIVE)
@@ -10,7 +13,7 @@ Game::Game(unsigned int width, unsigned int height)
 Game::~Game()
 {
 	delete Renderer;
-
+	delete Player;
 }
 
 void Game::Init()
@@ -34,6 +37,14 @@ void Game::Init()
 	one.Load("../resources/levels/one.lvl", this->Width, this->Height / 2);
 	this->Levels.push_back(one);
 	this->Level = 0;
+
+	glm::vec2 playerPos = glm::vec2(
+		this->Width / 2.0f - PLAYER_SIZE.x / 2.0f,
+		this->Height - PLAYER_SIZE.y
+	);
+
+	Player = new GameObject(playerPos, PLAYER_SIZE, ResourceManager::GetTexture("paddle"));
+
 }
 
 void Game::ProcessInput(float dt)
@@ -49,6 +60,7 @@ void Game::Render()
 	if (this->State == GAME_ACTIVE) {
 		Renderer->DrawSprite(ResourceManager::GetTexture("background"), glm::vec2(0.0f, 0.0f), glm::vec2(this->Width, this->Height), 0.0f);
 		this->Levels[this->Level].Draw(*Renderer);
+		Player->Draw(*Renderer);
 	}
 
 }
