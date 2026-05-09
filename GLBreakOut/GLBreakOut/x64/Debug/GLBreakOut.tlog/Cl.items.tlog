@@ -1,2 +1,9 @@
+C:\OpenGL\include\glad\glad.c;C:\Works\BreakOut\GLBreakOut\GLBreakOut\x64\Debug\glad.obj
 C:\Works\BreakOut\GLBreakOut\GLBreakOut\BreakOutMain.cpp;C:\Works\BreakOut\GLBreakOut\GLBreakOut\x64\Debug\BreakOutMain.obj
 C:\Works\BreakOut\GLBreakOut\GLBreakOut\Game.cpp;C:\Works\BreakOut\GLBreakOut\GLBreakOut\x64\Debug\Game.obj
+C:\Works\BreakOut\GLBreakOut\GLBreakOut\GameLevel.cpp;C:\Works\BreakOut\GLBreakOut\GLBreakOut\x64\Debug\GameLevel.obj
+C:\Works\BreakOut\GLBreakOut\GLBreakOut\GameObject.cpp;C:\Works\BreakOut\GLBreakOut\GLBreakOut\x64\Debug\GameObject.obj
+C:\Works\BreakOut\GLBreakOut\GLBreakOut\ResourceManager.cpp;C:\Works\BreakOut\GLBreakOut\GLBreakOut\x64\Debug\ResourceManager.obj
+C:\Works\BreakOut\GLBreakOut\GLBreakOut\Shader.cpp;C:\Works\BreakOut\GLBreakOut\GLBreakOut\x64\Debug\Shader.obj
+C:\Works\BreakOut\GLBreakOut\GLBreakOut\SpriteRenderer.cpp;C:\Works\BreakOut\GLBreakOut\GLBreakOut\x64\Debug\SpriteRenderer.obj
+C:\Works\BreakOut\GLBreakOut\GLBreakOut\Texture2D.cpp;C:\Works\BreakOut\GLBreakOut\GLBreakOut\x64\Debug\Texture2D.obj
