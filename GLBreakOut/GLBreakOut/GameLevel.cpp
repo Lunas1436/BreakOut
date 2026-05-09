@@ -8,7 +8,6 @@ void GameLevel::Load(const char* file, unsigned int levelWidth, unsigned int lev
 	this->Bricks.clear();
 	
 	unsigned int tileCode;
-	//GameLevel level;
 	std::string line;
 	std::ifstream fstream(file);
 	std::vector<std::vector<unsigned int>> tileData;

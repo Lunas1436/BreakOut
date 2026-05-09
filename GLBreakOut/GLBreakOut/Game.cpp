@@ -3,6 +3,7 @@
 SpriteRenderer* Renderer;
 
 Game::Game(unsigned int width, unsigned int height)
+	:Width(width), Height(height), State(GAME_ACTIVE)
 {
 }
 
@@ -15,7 +16,12 @@ Game::~Game()
 void Game::Init()
 {
 	ResourceManager::LoadShader("../shaders/vertexSpriteShader.vs", "../shaders/fragmentSpriteShader.fs", nullptr, "sprite");
+	glm::mat4 projection = glm::ortho(0.0f, static_cast<float>(this->Width), static_cast<float>(this->Height), 0.0f, -1.0f, 1.0f);
 	Shader spriteShader = ResourceManager::GetShader("sprite");
+	spriteShader.Use();
+	spriteShader.SetInteger("image", 0);
+	spriteShader.SetMatrix4("projection", projection);
+
 	Renderer = new SpriteRenderer(spriteShader);
 
 	ResourceManager::LoadTexture("../resource/textures/background.jpg", false, "background");
@@ -24,7 +30,7 @@ void Game::Init()
 	ResourceManager::LoadTexture("../resource/textures/background.jpg", false, "block_solid");
 
 	GameLevel one;
-	one.Load("../resource/Levels/one.lvl", this->Width, this->Height / 2);
+	one.Load("../resources/levels/one.lvl", this->Width, this->Height / 2);
 	this->Levels.push_back(one);
 	this->Level = 0;
 }
